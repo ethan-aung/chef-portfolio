@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chef Portfolio | John Doe</title>
+  <title>Chef Portfolio | Chef Aung</title>
+
   <style>
     * {
       margin: 0;
@@ -13,37 +14,38 @@
     }
 
     body {
-      background: white;
+      background: #ffffff;
       color: #333;
       line-height: 1.6;
     }
 
+    /* ================= HEADER ================= */
     header {
       background: url('https://images.unsplash.com/photo-1543352634-99a5d90dff7b') center/cover no-repeat;
-      height: 90vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: black;
+      color: #000;
+      padding: 40px 20px;
     }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   
-  text-align: center;
-}
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.chef-photo {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  object-position: center 30%;    
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-bottom: 20px;
-}
+    .chef-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 30%;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+    }
 
     header h1 {
       font-size: 3rem;
@@ -54,6 +56,7 @@
       margin-top: 10px;
     }
 
+    /* ================= NAV ================= */
     nav {
       background: #111;
       padding: 15px;
@@ -66,10 +69,11 @@
       display: flex;
       justify-content: center;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     nav ul li {
-      margin: 0 20px;
+      margin: 10px 20px;
     }
 
     nav ul li a {
@@ -78,6 +82,7 @@
       font-weight: bold;
     }
 
+    /* ================= SECTIONS ================= */
     section {
       padding: 60px 10%;
     }
@@ -88,41 +93,28 @@
       font-size: 2.2rem;
     }
 
+    /* ================= ABOUT ================= */
     .about {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.about img {
-width: 280px;
-  height: 300px;      /* must be same as width */
-  object-fit: cover;
-  border-radius: 50%; 
-}
-
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-  }
-}
-
-
-    .about img {
-      width: 300px;
-      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
     }
 
+    .about img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* ================= SKILLS & MENU ================= */
     .skills, .menu {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -134,18 +126,20 @@ width: 280px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: 600;
     }
 
+    /* ================= GALLERY ================= */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
     }
 
     .gallery img {
       width: 100%;
       border-radius: 10px;
-      cursor: pointer;
       transition: transform 0.3s;
     }
 
@@ -153,39 +147,38 @@ width: 280px;
       transform: scale(1.05);
     }
 
+    /* ================= CONTACT ================= */
     .contact-info {
-  text-align: center;
-}
+      text-align: center;
+    }
 
-.contact-item {
-  margin: 15px 0;
-  font-size: 1.1rem;
-}
+    .contact-item {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
 
-/* Normal links */
-.contact-item a {
-  color: #111;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .contact-item a {
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-/* WhatsApp button */
-.contact-item.whatsapp a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  background: #25D366;
-  color: white;
-  border-radius: 30px;
-  font-size: 1rem;
-  margin-top: 5px;
-}
+    .contact-item.whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      background: #25D366;
+      color: white;
+      border-radius: 30px;
+      margin-top: 5px;
+    }
 
-.contact-item.whatsapp a:hover {
-  background: #1ebe5d;
-}
+    .contact-item.whatsapp a:hover {
+      background: #1ebe5d;
+    }
 
+    /* ================= FOOTER ================= */
     footer {
       background: #111;
       color: white;
@@ -194,18 +187,48 @@ width: 280px;
       margin-top: 40px;
     }
 
+    /* ================= MOBILE ================= */
     @media (max-width: 768px) {
+      header {
+        min-height: auto;
+        padding: 80px 20px;
+      }
+
+      .chef-photo {
+        width: 140px;
+        height: 140px;
+      }
+
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about img {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <div class="hero-content">
-     <img src="Chef_Aung.jpeg" alt="Chef Aung" class="chef-photo">
+      <img src="Chef_Aung.jpeg" alt="Chef Aung" class="chef-photo">
       <h1>Chef Aung</h1>
       <p>Professional Chef | Fine Dining | Culinary Artist</p>
     </div>
@@ -222,16 +245,17 @@ width: 280px;
   </nav>
 
   <section id="about">
-  <h2>About Me</h2>
-
-  <div class="about">
-    <img src="Chef_Aung.jpeg" alt="Chef Aung">
-    <p>
-      Accomplished Chef with 10+ years of progressive culinary leadership across world-class kitchens, specializing in Japanese, Pan-Asian, Nikkei, French, and Mediterranean cuisines. Proven ability to innovate and execute elevated multi-cuisine menus, maintain premium ingredient standards, and lead high-performance kitchen brigades in fast-paced fine-dining environments. Skilled in modern and traditional cooking techniques, menu engineering, cost control, and kitchen optimization while delivering exceptional guest experiences. Recognized for creativity, precision, and passion for culinary excellence, with a strong commitment to consistency, hygiene, training, and operational efficiency. Seeking to contribute deep culinary expertise and global palate knowledge to a forward-thinking hospitality group or luxury dining establishment.
-    </p>
-  </div>
-</section>
-
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="Chef_Aung.jpeg" alt="Chef Aung">
+      <p>
+        Accomplished Chef with 10+ years of progressive culinary leadership across world-class kitchens,
+        specializing in Japanese, Pan-Asian, Nikkei, French, and Mediterranean cuisines. Proven ability
+        to innovate and execute elevated multi-cuisine menus while maintaining premium standards and
+        leading high-performance kitchen teams in fine-dining environments.
+      </p>
+    </div>
+  </section>
 
   <section id="skills">
     <h2>Skills</h2>
@@ -252,8 +276,6 @@ width: 280px;
       <div class="card">Beef Wellington</div>
       <div class="card">Truffle Mushroom Risotto</div>
       <div class="card">Classic Tiramisu</div>
-      <div class="card">Classic Tiramisu</div>
-      <div class="card">Classic Tiramisu</div>
     </div>
   </section>
 
@@ -266,48 +288,21 @@ width: 280px;
       <img src="dish_4.jpeg" alt="Dish">
       <img src="dish_5.jpeg" alt="Dish">
       <img src="dish_6.jpeg" alt="Dish">
-      <img src="dish_7.jpeg" alt="Dish">
-      <img src="dish_8.jpeg" alt="Dish">
-      <img src="dish_9.jpeg" alt="Dish">
-      <img src="dish_10.jpeg" alt="Dish">
-      <img src="dish_11.jpeg" alt="Dish">
     </div>
   </section>
 
- <section id="contact" class="contact">
-  <h2>Contact Me</h2>
-
-  <div class="contact-info">
-    <p class="contact-item">
-      📧 <a href="mailto:ethan.aung.private@email.com">Ethan_Aung@email.com</a>
-    </p>
-
-    <p class="contact-item">
-      📞 <a href="tel:+66840054587">+66840054587</a>
-    </p>
-
-    <p class="contact-item whatsapp">
-      💬 <a href="https://wa.me/66840054587" target="_blank">
-        WhatsApp
-      </a>
-    </p>
-  </div>
-</section>
-
-
-</section>
-
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p class="contact-item">📧 <a href="mailto:ethan.aung.private@email.com">ethan.aung.private@email.com</a></p>
+      <p class="contact-item">📞 <a href="tel:+66840054587">+66 84 005 4587</a></p>
+      <p class="contact-item whatsapp">💬 <a href="https://wa.me/66840054587" target="_blank">WhatsApp</a></p>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2026 Chef John Doe. All Rights Reserved.</p>
+    <p>© 2026 Chef Aung. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    function sendMessage(event) {
-      event.preventDefault();
-      alert('Thank you! Your message has been sent.');
-    }
-  </script>
 
 </body>
 </html>
